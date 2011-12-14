@@ -1,0 +1,13 @@
+---
+layout: post
+title: Jekyll and Bootstrap
+published: true
+---
+
+Overall I like Jekyll so far. It's simple and that counts for a lot. I'm wondering how I'll implement a live-search for the site, but something for the back-burner.
+
+I really prefer Textile syntax to Markdown, so I'll be making that switch ASAP. With this post actually. We'll see how that works out.
+
+Other than that, I want to see about reimplementing this design with "Twitter's Bootstrap":http://twitter.github.com/bootstrap/ framework just to get familiar with it. The markup in this design is actually pretty nice in my opinion, but it's an excuse to give Bootstrap a spin.
+
+That's about it for tonight. Let's push this and see how it looks!
