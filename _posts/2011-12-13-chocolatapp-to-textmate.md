@@ -1,0 +1,25 @@
+---
+layout: post
+title: Chocolat to TextMate
+published: true
+---
+
+I've been using [ChocolatApp](http://chocolatapp.com) for about a month now. It's pretty good. I'm going back to TextMate (1.x) though.
+
+### Likes
+
+* Out of the box it's prettier, with a standard Drawer, more polished Find
+* The default set of light-on-dark themes feels a little more robust
+* The "Active" documents area is a bit more functional than tabs when you're jumping around between a lot of files
+
+### Dislikes
+
+* TextMate will auto outdent standard closing syntax structures for you, like "end" in Ruby or "fi" in Bash; Chocolat, not so much
+* There is no "block-comment" functionality for the Shell Script syntax, which I spend a good bit of time in
+* There is no bundle editor for simple fixes
+* You can't tab over to the "Don't Save" option when closing an unsaved file (I find myself hitting CMD+T a lot inadvertently, which in Chocolat creates a new blank file/tab)
+* It's text-selection seems a bit off, doesn't respect periods in hostnames for example, so a keyboard OPTION+SHIFT+ARROW highlight more often than not ends up highlighting way too much and you have to bang at the arrow keys a lot to compensate
+
+Regarding the bundle editor, I'm no tweaker, but it would be nice to fix some of the more glaring oversights, like the lack of a shortcut for the HTML5 doctype snippet in the HTML bundle.
+
+So for now, until the Chocolat folks sort out some of the issues, I'm heading back to TextMate. Overall I do think Chocolat is a significant improvement over TextMate in most ways, but the ways in which it falls short are really annoying/distracting.
