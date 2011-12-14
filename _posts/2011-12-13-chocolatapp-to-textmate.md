@@ -2,6 +2,7 @@
 layout: post
 title: Chocolat to TextMate
 published: true
+date: 2011-12-13 23:00
 ---
 
 I've been using [ChocolatApp](http://chocolatapp.com) for about a month now. It's pretty good. I'm going back to TextMate (1.x) though.
