@@ -5,15 +5,15 @@ published: true
 date: 2011-12-13 23:00
 ---
 
-I've been using [ChocolatApp](http://chocolatapp.com) for about a month now. It's pretty good. I'm going back to TextMate (1.x) though.
+I've been using "ChocolatApp":http://chocolatapp.com for about a month now. It's pretty good. I'm going back to TextMate (1.x) though.
 
-### Likes
+h3. Likes
 
 * Out of the box it's prettier, with a standard Drawer, more polished Find
 * The default set of light-on-dark themes feels a little more robust
 * The "Active" documents area is a bit more functional than tabs when you're jumping around between a lot of files
 
-### Dislikes
+h3. Dislikes
 
 * TextMate will auto outdent standard closing syntax structures for you, like "end" in Ruby or "fi" in Bash; Chocolat, not so much
 * There is no "block-comment" functionality for the Shell Script syntax, which I spend a good bit of time in
