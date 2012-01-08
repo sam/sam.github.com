@@ -3,25 +3,23 @@ layout: default
 title: sam.github.com
 ---
 
-<ul class="posts">
+<div id="posts">
   {% for post in site.posts limit: 5 %}
-    <header class='ten columns offset-by-four'>
-      <h2><a href="{{ post.url }}" title="Permanent link to: '{{ post.title }}'">{{ post.title }}</a></h1>
-    </header>
+    <h2><a href="{{ post.url }}" title="Permanent link to: '{{ post.title }}'">{{ post.title }}</a></h1>
 
-    <div class='five columns offset-by-four gray'>
+    <div class="dateline">
       {{ post.date | date_to_string }}
     </div>
     
-    <article class='ten columns offset-by-four'>
+    <article>
       {{ post.content }}
     </article>
     <hr class="front">
     </br>
   {% endfor %}
-</ul>
+</div>
 
-<ul id="posts">
+<ul id="post_archive">
   {% for post in site.posts offset:5 %}
     <li>
       <a class="nine columns offset-by-four" href="{{ post.url }}">{{ post.title }}</a>

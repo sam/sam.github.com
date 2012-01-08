@@ -20,24 +20,27 @@
       -webkit-text-size-adjust: none;
     }
     .container { width: 840px; }
-    a, a:visited { color: #06a; }
-    p {
-      font-size: 1.2em;
-      line-height: 1.4em;
-    }    
+    a { color: #06A; text-decoration: none; }
+    a:hover {
+      color: #06A;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    a:visited { color: #607890; }
+    .dateline { color: #999; }
+    p { margin-bottom: 20px; }
+    p, .dateline {
+      font-size: 1.25em;
+      line-height: 1.5em;
+    }
     .sidebar ul {
       list-style: none outside;
       margin: 0px;
       font-size: 1.2em;
+      margin-bottom: 20px;
     }
     .sidebar ul li { line-height: 1.4em; }
     h1, h2, h3 { font-weight: normal; }
-    h1 > a,
-    h1 > a:visited,
-    h2 > a,
-    h2 > a:visited,
-    h3 > a,
-    h3 > a:visited { color: #607890; }
     h1 {
       font-size: 3.8em;
       line-height: 1.1em;
