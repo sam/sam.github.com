@@ -5,6 +5,6 @@ published: true
 date: 2012-01-08 13:00
 ---
 
-I'm finally getting around to bootstrapping this site. Bootstrap itself seems fairly easy so far. Figuring out the best way to override some of the defaults is going to require an actual bit of reading. It's all there at the "project home-page":http://twitter.github.com/bootstrap/ I think; I just glossed over it the first time through.
+I'm finally getting around to bootstrapping this site. "Bootstrap":http://twitter.github.com/bootstrap/ itself seems fairly easy so far. Figuring out the best way to override some of the defaults is going to require an actual bit of reading. It's all there at the project home-page I think; I just glossed over it the first time through.
 
 Reproducing an existing layout is going to take some practice. Otherwise it seems like a nice framework so far. The basic layout didn't take any thought about floats, clearing them properly, or any effort at all really. I wonder how well the abstraction holds up with something more complex.
