@@ -1,0 +1,19 @@
+---
+layout: post
+title: NGinx ModZip
+published: true
+---
+
+I had trouble getting NGinx 1.0.11 building under Ubuntu 11.10 yesterday. We use a module called "ModZip":https://github.com/evanmiller/mod_zip and it appears GCC 4.6.1 (and maybe Ubuntu's default flags for it) has introduced some checks to detect if a variable is defined and set, but then unused. This causes build errors.
+
+So I dove in to fix it. I'm not a C developer, so my first attempt messed it up. I removed an iconv call providing a bit of critical functionality because the result wasn't used. What I missed was that two pointers were passed within the call. "So here's my second attempt":https://github.com/sam/mod_zip/commit/eb9fa0f532fa2123c2b30c86c99431564178656a. This one fixes the build, and doesn't break anything.
+
+With this patch I can build everything on GCC 4.6.1 and keep ModZip around, which is critical to many of our projects. Here's why:
+
+ModZip operates similarly to X-Send-File. You might have a fixed, or limited pool of application servers. Especially in a single-threaded environment like most Ruby deployments. So if someone requests to download a 1GB file that's not in your web-root you'd have to tie up an application server for the duration of the download. If the client has a slow connection this could be a good long while. Enough clients request such a download, and your small pool of application servers can quickly be exhausted, effectively causing an unintentional Denial Of Service.
+
+Instead of this, X-Send-File allows you to set a header that tells the upstream web-server (Apache, NGinx, etc) where the file is that you want to serve, and what name to give it at download time (many of our files are represented by UUIDs internally for example, though we want something friendly and descriptive to be used for downloads). That way your application server is just setting a header and quickly returning back to the pool to serve other requests. The upstream web-server then reads and strips the header, and does the actual sending of the file.
+
+ModZip is similar, but for (you guessed it!) zip files. You pass multiple paths/filenames in a special header in your application server, and then it, handles creating a zip file and streaming it to the client. While your application server would first need to zip everything up before sending a single byte to the upstream, ModZip can almost immediately begin streaming the zip. This frees up your application server, and ModZip efficiently tackles the rest for you.
+
+It's a great tool. I definitely recommend it. With this patch, you should have no trouble getting it going in your own NGinx setup.
