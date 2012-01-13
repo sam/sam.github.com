@@ -1,0 +1,20 @@
+---
+layout: post
+title: GeminaboxPlus
+published: true
+---
+
+I just released a quick project to help you get quickly started running your own local Gem server. It's faster than going out to
+Gemcutter all the time when you're bundling a project and you can keep private gems private. The Gemcutter project itself
+assumes Amazon S3 integration, so "Geminabox":https://github.com/cwninja/geminabox is really a better fit for most local
+installations I think.
+
+"GeminaboxPlus":https://github.com/sam/geminaboxplus is just a default app for Geminabox with a patch to move reindexing
+offline to a "Resque":https://github.com/defunkt/resque worker.
+
+With this you can have a solid setup going in just a few minutes. If you want to increase your project's Bundler performance,
+or could use a private Gem server, there's really no excuse not to just clone and fire up your own. :-)
+
+The README has the full details, but if you want the 2-minute-and-running version I've copy/pasted the meat here:
+
+<script src="https://gist.github.com/1607465.js?file=gistfile1.sh"></script>
