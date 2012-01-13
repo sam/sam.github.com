@@ -4,16 +4,13 @@ title: GeminaboxPlus
 published: true
 ---
 
-I just released a quick project to help you get quickly started running your own local Gem server. It's faster than going out to
-Gemcutter all the time when you're bundling a project and you can keep private gems private. The Gemcutter project itself
-assumes Amazon S3 integration, so "Geminabox":https://github.com/cwninja/geminabox is really a better fit for most local
-installations I think.
+I just released a quick project to help you get quickly started running your own local Gem server. It's faster than going out to Gemcutter all the time when you're bundling a project and you can keep private gems private. The Gemcutter project itself assumes Amazon S3 integration, so "Geminabox":https://github.com/cwninja/geminabox is really a better fit for most local installations I think.
 
-"GeminaboxPlus":https://github.com/sam/geminaboxplus is just a default app for Geminabox with a patch to move reindexing
-offline to a "Resque":https://github.com/defunkt/resque worker.
+"GeminaboxPlus":https://github.com/sam/geminaboxplus is just a default app for Geminabox *with a patch to move reindexing offline to a "Resque":https://github.com/defunkt/resque worker*. Geminabox is great on it's own, and easy to setup; it's only real weakness is when you have a lot of Gems (we've got ~2400 on our system at the office) because then reindexing takes quite awhile.
 
-With this you can have a solid setup going in just a few minutes. If you want to increase your project's Bundler performance,
-or could use a private Gem server, there's really no excuse not to just clone and fire up your own. :-)
+How do you get to 2400 Gems? You push everything you need for your projects to your own Gem server. ;-) That way you don't have to worry about gems you depend on dissapearing at some point in the future, and you don't need to source http://gemcutter.org in your Gemfiles so your @bundle install@s are much quicker.
+
+With this you can have a solid setup going in just a few minutes. If you want to increase your project's Bundler performance, or could use a private Gem server, there's really no excuse not to just clone and fire up your own. :-)
 
 The README has the full details, but if you want the 2-minute-and-running version I've copy/pasted the meat here:
 
