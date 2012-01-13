@@ -6,7 +6,7 @@ published: true
 
 Here's a quick screen-cast demonstrating provisioning in SmartOS. I restarted a dozen times to try to keep from rambling. ;-)
 
-If you're new to SmartOS you can start here: http://smartos.org.
+If you're new to SmartOS you can start here: "http://smartos.org":http://smartos.org.
 
 This demonstration assumes you already have a base image setup that you're happy with, and you're ready to go to town cloning up new Guests based on it.
 
