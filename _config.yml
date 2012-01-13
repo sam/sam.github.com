@@ -1,5 +1,6 @@
 pygments: true
 permalink: '/:title'
 markdown: rdiscount
+paginate: 20
 rdiscount:
   extensions: [smart]
