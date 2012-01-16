@@ -1,0 +1,16 @@
+---
+layout: post
+title: SmartOS Enhancements
+published: true
+---
+
+Here's a list of things, in no particular order, I'd like to see in SmartOS:
+
+* FIX: Create zones/swap during configuration
+* FIX: Create raidz vdevs during configuration
+* ENHANCEMENT: Provide ability to specify dump device
+* ENHANCEMENT: Provide ability to define "aggr" (LACP) interface during configuration
+* FIX (low priority): Patch vmadmd/sysinfo to allow multiple zpools
+* DOCUMENTATION: /opt/custom examples and use-cases
+
+That's about it off the top of my head. Most of these things have work-arounds. I wouldn't consider any of them blocking issues, but they're the things I most frequently run into. If I find the time I'd like to contribute back. Most of these appear to just require a little scripting knowledge, and maybe a bit of node.js.
