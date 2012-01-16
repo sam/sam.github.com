@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SmartOS Setup
-published: false
+published: true
 ---
 
 Here we're going to go over the basics of getting the latest "SmartOS release":http://wiki.smartos.org/display/DOC/Download+SmartOS (January 12, 2012 as of this post) running. Here's a screen-cast for the video inclined, but I'll also provide all the tweaky bits with some more detail below so you can follow along at home.
@@ -12,7 +12,7 @@ If you're not already familiar with ZFS, I'd suggest downloading the latest "Fre
 
 For everyone else, on with the show!
 
-<embed the youtubes screencast>
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/ZLcJb1u0yKQ&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/ZLcJb1u0yKQ&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
 
 h3. Single Disk Configurations
 
