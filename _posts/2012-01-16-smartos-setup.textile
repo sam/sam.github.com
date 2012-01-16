@@ -1,0 +1,73 @@
+---
+layout: post
+title: SmartOS Setup
+published: false
+---
+
+First, an issue with SmartOS configuration common to all installations. No swap is created. If you create a zones/swap device, it'll be used automatically. The device should be a zvol, the same size as your physical memory. So in my case:
+
+  zfs create -oprimarycache=none -osecondarycache=none -V256G zones/swap
+
+The primarycache setting is your ZFS Adaptive Read Cache (in-memory cache), which obviously doesn't make sense for a swap device since if you shouldn't be pushing stuff to swap if you had the RAM to keep it in memory but were using that memory to cache data written to swap.
+
+The secondarycache is the ZFS L2ARC, ie: a cache device (SSD) attached to the pool. Again, caching swap doesn't really make much sense, so make sure that it's not.
+
+I've seen it mentioned on IRC that this is automatic, but without confirmation, so best to make sure.
+
+Now we move onto multi-disk configurations. If this is you, then hold off on adding the swap above. We'll get around to it in a bit after a few other things. The SmartOS configuration script has a bug that ignores extra disks you pass it. It'll only use the first.
+
+On our staging system we have a JBOD with 24 drives on it, and 3 drives in the server itself. We want to use that JBOD for our "zones" zpool. Because you can't remove a top-level vdev in ZFS, you're in a bit of a pickle though. If you use one of those disks right off the bat, you won't be able to get the end result/configuration you want. Unless the disk you use is ultimately intended to be a spare. You can add/remove those at will.
+
+So if you've already configured SmartOS, you want a redundant multi-disk (mirrored, raidz, etc) and you don't have a spare disk, this is probably where you stop and go dig up a spare disk.
+
+If you've already configured your install, and you chose one of the disks you ultimately want to use in your pool, then you'll need to delete it, and reconfigure it to use one of your spare disks instead.
+
+The easiest way to blow the pool away so you can get back to the configuration is to run the @format@ command, and blow away the partition on the disk with fdisk.
+
+Once that's done, we can continue.
+
+First up, you can't configure a dump device on your pool if it's going to include log or cache devices, or if it's going to span multiple raidz vdevs. So you're going to want to dedicate a raw physical device. As an aside, because of an issue in a critical service (vmadmd) when you have more than one zpool, you can't put the dump device on a secondary pool. You're going to want to make sure your system only has the "zones" pool when all is said and done, so that's why we use a raw device here.
+
+  dumpadm -d /dev/dsk/c0t2d0
+
+You can't use this device for anything now else mind you. So in the multi-disk setup you need:
+
+ 1. The initial disk you'll install to (this could be a device you don't intend to use, or it could ultimately be intended to be add to the pool as a spare)
+ 2. The disk for the dump device
+ 3. The disk(s) for your multi-device "zones" zpool
+
+Now we'll create the multi-device zpool that we'll eventually turn into our "zones" zpool:
+
+  zpool create backup \
+  spare c1t0d0 c1t1d0 c1t2d0 \
+  raidz2 c1t3d0  c1t4d0  c1t5d0  c1t6d0  c1t7d0  c1t8d0  c1t9d0 \
+  raidz2 c1t10d0 c1t11d0 c1t12d0 c1t13d0 c1t14d0 c1t15d0 c1t16d0 \
+  raidz2 c1t17d0 c1t18d0 c1t19d0 c1t20d0 c1t21d0 c1t22d0 c1t23d0
+
+Note, this is a JBOD in my case. Each of these is a 1TB 7200RPM disk, so this will create about 15TB of usable space minus the spares (3TB) and parity (6TB). It's really a bit of a silly setup. If you need that much storage for guest content, it should probably be on NFS or something so you can eventually have redundant, load-balanced guests. If you needed it for performance, you'd use smaller, higher-RPM disks in conjunction with SSDs.
+
+I'm just using this setup here because this is a host for our non-production staging sites. By comparison the production setup consists of twelve 10,000RPM 300GB disks (two of those reserved for spares, and the other ten split into two raidz sets), two mirrored 50GB SSDs for log devices, and one 100GB SSD as a L2ARC cache device. A lot less space, but a lot more performance. When you're running a lot of VMs, disk IO performance is going to be pretty high up there when it comes to keeping things snappy.
+
+So now we have our "backup" zpool. Let's replicate our data to it:
+
+  zfs snapshot -r zones@backup
+  zfs send -R zones@backup | zfs recv -Fd backup
+
+Now that our dump device is off of the "zones" pool, and we've backed up our install, we can delete it:
+
+  zpool destroy -f zones
+
+Finally, we'll export our "backup" pool, and reimport it with the "zones" name:
+
+  zpool export backup
+  zpool import backup zones
+
+If the disk for the original configure-time "zones" pool was intended as a spare, and you had left it off earlier in the @zpool create backup@ since it was in-use, now is when you'd add it back:
+
+  zpool add zones spare c1t0d0
+
+Now we'll loop back around to the issue we mentioned at the beginning, and create the swap device that the configuration script missed creating for us:
+
+  zfs create -oprimarycache=none -osecondarycache=none -V256G zones/swap
+
+Finally your zpool is how you wanted it. All disks where they belong, and a dedicated dump device humming along. Go ahead and reboot now to ensure everything's properly mounted, and afterwards ensure that @swap -l@ lists your swap device and @dumpadm@ displays your dedicated device.
