@@ -7,7 +7,7 @@ published: true
 Here's a list of things, in no particular order, I'd like to see in SmartOS:
 
 * FIX: Create zones/swap during configuration
-* FIX: Create raidz vdevs during configuration
+* FIX: Create raidz vdevs during configuration (pending pull request: https://github.com/joyent/smartos-overlay/pull/4)
 * ENHANCEMENT: Provide ability to specify dump device
 * ENHANCEMENT: Provide ability to define "aggr" (LACP) interface during configuration
 * FIX (low priority): Patch vmadmd/sysinfo to allow multiple zpools
