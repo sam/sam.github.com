@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My "Fail Rated" Jeep Grand Cherokee
-published: false
+published: true
 categories: Jeep Life
 ---
 
