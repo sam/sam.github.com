@@ -2,6 +2,7 @@
 layout: post
 title: SmartOS Guest Provisioning
 published: true
+categories: SmartOS DevOps
 ---
 
 Here's a quick screen-cast demonstrating provisioning in SmartOS. I restarted a dozen times to try to keep from rambling. ;-)

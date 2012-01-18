@@ -3,6 +3,7 @@ layout: post
 title: Jekyll and Bootstrap
 published: true
 date: 2011-12-13 23:08
+categories: Jekyll
 ---
 
 Overall I like Jekyll so far. It's simple and that counts for a lot. I'm wondering how I'll implement a live-search for the site, but something for the back-burner.

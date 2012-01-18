@@ -1,0 +1,4 @@
+layout:     default
+title:      Redis Directory
+repository: git://github.com/sam/redis_directory.git
+published:  true

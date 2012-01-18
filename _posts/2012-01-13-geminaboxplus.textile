@@ -2,6 +2,7 @@
 layout: post
 title: GeminaboxPlus
 published: true
+categories: Ruby DevOps
 ---
 
 I just released a quick project to help you get quickly started running your own local Gem server. It's faster than going out to Gemcutter all the time when you're bundling a project and you can keep private gems private. The Gemcutter project itself assumes Amazon S3 integration, so "Geminabox":https://github.com/cwninja/geminabox is really a better fit for most local installations I think.

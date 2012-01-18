@@ -9,6 +9,8 @@ blog: true
   {{ page.date | date_to_string }}
 </div>
 
+<div class="categories">Filed under {{ page.categories | category_links }}</div>
+
 <div id='tweet'>
   <a href="http://twitter.com/share" class="twitter-share-button" data-text="{{ page.title }}" data-count="horizontal" data-via="srsmoot" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Post Twitter Share']);">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </div>

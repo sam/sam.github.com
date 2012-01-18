@@ -2,6 +2,7 @@
 layout: post
 title: SmartOS Setup
 published: true
+categories: SmartOS DevOps
 ---
 
 Here we're going to go over the basics of getting the latest "SmartOS release":http://wiki.smartos.org/display/DOC/Download+SmartOS (January 12, 2012 as of this post) running. Here's a screen-cast for the video inclined, but I'll also provide all the tweaky bits with some more detail below so you can follow along at home.

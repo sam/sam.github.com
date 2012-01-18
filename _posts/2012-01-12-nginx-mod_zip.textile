@@ -2,6 +2,7 @@
 layout: post
 title: NGinx ModZip
 published: true
+categories: Nginx DevOps
 ---
 
 I had trouble getting NGinx 1.0.11 building under Ubuntu 11.10 yesterday. We use a module called "ModZip":https://github.com/evanmiller/mod_zip and it appears GCC 4.6.1 (and maybe Ubuntu's default flags for it) has introduced some checks to detect if a variable is defined and set, but then unused. This causes build errors.

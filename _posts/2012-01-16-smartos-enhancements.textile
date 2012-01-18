@@ -2,6 +2,7 @@
 layout: post
 title: SmartOS Enhancements
 published: true
+categories: SmartOS
 ---
 
 Here's a list of things, in no particular order, I'd like to see in SmartOS:

@@ -5,11 +5,13 @@ title: sam.github.com
 
 <div id="posts">
   {% for post in site.posts limit: 5 %}
-    <h2><a href="{{ post.url }}" title="Permanent link to: '{{ post.title }}'">{{ post.title }}</a></h1>
+    <h2><a href="{{ post.url }}" title="Permanent link to: '{{ post.title }}'">{{ post.title }}</a></h2>
 
     <div class="dateline">
       {{ post.date | date_to_string }}
     </div>
+    
+    <div class="categories">Filed under {{ post.categories | category_links }}</div>
     
     <article>
       {{ post.content }}

@@ -1,0 +1,13 @@
+---
+layout: default
+title: sam.github.com
+---
+
+<h1>Categories</h1>
+
+<div id="posts">
+  {% for category in site.categories %}
+    <h2><a href="/categories/{{ category[0] }}/" title="Category: {{ category[0] }}">{{ category[0] }}</a></h2>
+    <hr class="front">
+  {% endfor %}
+</div>
