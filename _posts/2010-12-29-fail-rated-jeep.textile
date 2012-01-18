@@ -5,36 +5,30 @@ published: true
 categories: Jeep Life
 ---
 
-  <p>Days in the shop/Days owned:</p>
-  <div style="font-size: 14em;"><span style="color: #d22;">44</span>/75</div>
+Days in the shop/Days owned:
+
+p{font-size: 14em;}. <span style="color: #d22;">44</span>/75
   
-  <img style="float: left;" alt="Jack at the Zoo" src="/static/images/fail-rated-jeep/jack.jpg">
-  <p>I drove a 2009 Volvo C70 Convertible. I've owned and loved several Volvos. The dealership always treated us
-    right. No complaints. Enter Jack.</p>
-  <p>This little guy needed something more family friendly. My wife has a Volvo XC90, which is truly a great
-    family hauler, but it's a lease and we were burning through the miles far too quickly. My next car needed to
-    be a purchase so we didn't have to worry about lease exits and someday maybe even pay it off. ;-)</p>
+<img alt="Jack at the Zoo" src="/static/images/fail-rated-jeep/jack.jpg">
 
-  <iframe width="560" height="315" src="http://www.youtube.com/embed/1uIBL_ei5VM" frameborder="0" allowfullscreen></iframe>
+I drove a 2009 Volvo C70 Convertible. I've owned and loved several Volvos. The dealership always treated us right. No complaints. Enter Jack.
 
-  <p>This commercial got me into the Jeep dealer. No kidding, it's the best commercial I've ever seen. After the
-    test-drive I was hooked.</p>
+This little guy needed something more family friendly. My wife has a Volvo XC90, which is truly a great family hauler, but it's a lease and we were burning through the miles far too quickly. My next car needed to be a purchase so we didn't have to worry about lease exits and someday maybe even pay it off. ;-)
 
-  <h4>October 15th, 2010</h4>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/1uIBL_ei5VM" frameborder="0" allowfullscreen></iframe>
 
-  <p>A couple weeks later my wife, Jack and I were able to make it down to <a title="Dealership Website"
-    href="http://www.dodgecityofmckinney.net/">Dodge City Dodge</a>. I spotted a 2011 Jeep Grand Cherokee Laredo
-    X.</p>
+This commercial got me into the Jeep dealer. No kidding, it's the best commercial I've ever seen. After the test-drive I was hooked.
 
-  <img style="float: right;" alt="Jeep at the dealer lot" src="/static/images/fail-rated-jeep/at-the-lot.jpg">
+h3. October 15th, 2010
+
+A couple weeks later my wife, Jack and I were able to make it down to <a title="Dealership Website" href="http://www.dodgecityofmckinney.net/">Dodge City Dodge</a>. I spotted a 2011 Jeep Grand Cherokee Laredo X.
+
+<img alt="Jeep at the dealer lot" src="/static/images/fail-rated-jeep/at-the-lot.jpg">
   
-  <p>It had a V8. Everything I wanted but a sun-roof really. It was kitted out with all the off-roading features.
-    I've never been off-roading before, but the idea of camping with the family, maybe hitting some light trails was exciting.
-    If I was going to give up the Convertible, I was going camping damnit.</p>
-  <p>We were comparing against a Volvo XC60 we had already worked out the numbers on with the Volvo dealer. After
-    tacking on the extended warranty to get rental coverage (which we'd always got from Volvo for free), the Jeep
-    came in a few (within $10) bucks cheaper. We signed the paperwork that evening and went home with our new
-    Jeep.</p>
+It had a V8. Everything I wanted but a sun-roof really. It was kitted out with all the off-roading features. I've never been off-roading before, but the idea of camping with the family, maybe hitting some light trails was exciting. If I was going to give up the Convertible, I was going camping damnit.
+
+We were comparing against a Volvo XC60 we had already worked out the numbers on with the Volvo dealer. After tacking on the extended warranty to get rental coverage (which we'd always got from Volvo for free), the Jeep came in a few (within $10) bucks cheaper. We signed the paperwork that evening and went home with our new Jeep.
+
   <p>So now I was the proud owner of a <b>2011 Jeep Grand Cherokee Laredo X</b>. It had:
     <ul>
       <li>Hemi V8</li>
