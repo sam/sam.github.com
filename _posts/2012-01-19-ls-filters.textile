@@ -1,0 +1,18 @@
+---
+layout: post
+title: ls Filters
+published: true
+categories: DevOps
+---
+
+Just a quick note. You might sometimes find yourself wanting to filter a list of files on your system. We'll use a clone of this blog for an example. You could use @grep@:
+
+<script src="https://gist.github.com/1642129.js?file=gistfile1.sh"></script>
+
+Regexps are obviously very powerful, and I often use something similar in my own scripts.
+
+For simple cases like this however, you might want to get familiar with the built-in Bash wildcards:
+
+<script src="https://gist.github.com/1642114.js?file=gistfile1.sh"></script>
+
+Quick and easy. Hope you find it useful.
