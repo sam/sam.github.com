@@ -5,8 +5,6 @@ published: true
 categories: DevOps
 ---
 
-There's probably thousands of ways to do this out there, but here's mine. A quick little shell script I wrote up to migrate a repository from a local gem-server up to github, including your branches and tags. All you need to do is create an empty repository on Github first.
-
-For extra credit you could wire up to the "Github Repository API":http://develop.github.com/p/repo.html to create it for you.
+There's probably thousands of ways to do this out there, but here's mine. A quick little shell script I wrote up to migrate a repository from a local gem-server up to github organization, including your branches and tags. If you give it your login details it'll create the remote repository if it doesn't already exist.
 
 <script src="https://gist.github.com/1635893.js?file=gistfile1.sh"></script>
