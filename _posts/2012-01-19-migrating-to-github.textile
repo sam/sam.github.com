@@ -5,6 +5,8 @@ published: true
 categories: DevOps
 ---
 
-There's probably thousands of ways to do this out there, but here's mine. A quick little shell script I wrote up to migrate a repository from a local gem-server up to github organization, including your branches and tags. If you give it your login details it'll create the remote repository if it doesn't already exist.
+There's probably thousands of ways to do this out there, but here's mine. A quick little shell script I wrote up to migrate a repository from a local gem-server up to a "Github":http://github.com Organization, including your branches and tags. If you give it your login details it'll create the remote repository if it doesn't already exist.
 
 <script src="https://gist.github.com/1635893.js?file=gistfile1.sh"></script>
+
+Once you tweak the exported variables at the top, you call it like so: @moveit my_repository_name@
