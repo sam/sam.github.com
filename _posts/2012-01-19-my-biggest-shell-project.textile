@@ -1,0 +1,28 @@
+---
+layout: post
+title: My Biggest Shell Project
+published: true
+categories: DevOps
+---
+
+'Tis *Bash* really. Because it's the default, or easy to get on FreeBSD, OpenBSD, OSX, Ubuntu and Solaris.
+
+<script src="https://gist.github.com/1644593.js?file=gistfile1.sh"></script>
+
+So how many lines is it?
+
+p{font-size:80px;color:#8af;text-align:center;}. 18,865
+
+Yes. I wrote this post just for that. Vanity. Sue me. ;-)
+
+It's a big collection of scripts to automate server configuration. It spans the gamut from compiling NGinx, to configuring LACP on FreeBSD, to generating HAProxy entries, to cloning git repositories and mounting NFS shares. Pretty much anything you'd need to web-servers, load-balance them, setup replicated database servers, etc is in there.
+
+Why not "Chef":http://www.opscode.com/chef/ or "Puppet":http://puppetlabs.com/?
+
+Because they're complex. :-) Force yourself to learn shell-scripting, and soon enough you can fire off a script like the Github Migration in the previous post in a few minutes, saving days of manual labor when you're migrating over *100* projects. You might be surprised at just how often you use it. I couldn't imagine doing half of what I used to do manually or with Ruby now.
+
+I mean, Ruby is great in many many ways. But it's no substitute for being able to fire off a quick for-loop right where your cursor is _now_.
+
+So if you decide to tackle one new language this year, and you spend a fair about of time on *nix or *bsd like systems, I heartily recommend Bash.
+
+By the way, I named that system's administration project after "this beer":http://www.oskarblues.com/the-brews/gubna. _Gubna_. ;-)
