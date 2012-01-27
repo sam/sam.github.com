@@ -1,0 +1,20 @@
+---
+layout: post
+title: Blog
+published: true
+categories: Ruby
+---
+
+I've got some server maintenance at midnight tonight. In the mean-time I'm up here at work twiddling my thumbs with three hours to go. Yeah, there's work things I could be doing, but I've already put in more than a full day and I've got a cold. :-p
+
+I've looked at "HackerNews":http://news.ycombinator.com already.
+
+So I'm going to do something. Write some code.
+
+I like Jekyll. Mostly. It's just that the whole pull, type-out-an-awkward-filename, write some YAML, write some textile, commit, push dance is enough of a speed bump that I don't post enough. At least that's my excuse.
+
+So I'm going to try my hand at whipping up a blog. There's lots of things I could write it in. "Node.js":http://nodejs.org/ is something I've been meaning to give a go. "ngx_openresty":http://agentzh.blogspot.com/2012/01/ngxopenresty-stable-version-101024.html looks _really_ interesting. But for tonight I'll see what I can accomplish in three hours and stick with Ruby. I could go with "Harbor":http://github.com/wiecklabs/harbor, but I like Sinatra's router, and I think this is something I can manage in a single "controller" so I'm going to give that a shot. I could persist to PostgreSQL and "Sequel":http://sequel.rubyforge.org/ which is always a winning combination. But I think I'll go with Redis this time around. It's fast, and ought to suit the blog-post format well. At least initially. Not sure of the best fit, but I'll try a key for each post, and a List to track/retrieve them.
+
+Follow along "here":https://github.com/sam/blog, and with any luck I'll have something in the next few hours. :-)
+
+I've got a disused Linode instance already, so if it works out, I'll deploy, update DNS and we'll see how it takes.
